@@ -1,0 +1,32 @@
+-- Project: Design a store database
+
+CREATE TABLE my_skincare_store (id INTEGER PRIMARY KEY , item TEXT, aisle INTEGER, price INTEGER);
+
+INSERT INTO my_skincare_store VALUES (1, "face_wash", 1, 8.99);
+INSERT INTO my_skincare_store VALUES (2, "face_exfoliator", 2, 7.00);
+INSERT INTO my_skincare_store VALUES (3, "face_mask", 3, 5.50);
+INSERT INTO my_skincare_store VALUES (4, "BHA_exfoliant", 2, 12.00);
+INSERT INTO my_skincare_store VALUES (5, "hydrocolloid_patch", 4, 4.69);
+INSERT INTO my_skincare_store VALUES (6, "nose_strips", 4, 3.50);
+INSERT INTO my_skincare_store VALUES (7, "hyaluronic_acid", 2, 10.99);
+INSERT INTO my_skincare_store VALUES (8, "face_toner", 1, 9.50);
+INSERT INTO my_skincare_store VALUES (9, "moisturizing_gel", 5, 8.00);
+INSERT INTO my_skincare_store VALUES (10, "moisturizing_cream", 5, 10.00);
+INSERT INTO my_skincare_store VALUES (11, "skin_peel", 4, 6.85);
+INSERT INTO my_skincare_store VALUES (12, "clay_mask", 3, 4.25);
+INSERT INTO my_skincare_store VALUES (13, "facial_essence", 1, 13.50);
+INSERT INTO my_skincare_store VALUES (14, "sunscreen", 5, 9.20);
+INSERT INTO my_skincare_store VALUES (15, "vitamin_C_serum", 2, 12.50);
+
+--display the database ordered by price
+SELECT * FROM my_skincare_store ORDER BY price;
+
+--what is the average price of items in the aisle section?
+SELECT AVG(price) "avg aisle item price" FROM my_skincare_store where aisle='2';
+
+--what are the 5 most expensive items?
+SELECT item, price FROM my_skincare_store ORDER BY price DESC LIMIT 5;
+
+
+
+
